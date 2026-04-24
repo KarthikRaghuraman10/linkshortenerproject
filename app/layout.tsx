@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
+import { shadcn } from "@clerk/themes";
 import { HeaderAuth } from "@/components/header-auth";
 import "./globals.css";
 
@@ -20,7 +21,7 @@ export default function RootLayout({
       className="h-full antialiased dark"
     >
       <body className="min-h-full flex flex-col">
-        <ClerkProvider>
+        <ClerkProvider appearance={{ baseTheme: shadcn }}>
           <header className="flex items-center justify-between px-6 py-4 border-b border-border bg-background">
             <span className="text-lg font-semibold tracking-tight">Link Shortener</span>
             <HeaderAuth />
