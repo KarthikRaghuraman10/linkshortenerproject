@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 export function HomeCta({ size = "lg" }: { size?: "default" | "sm" | "lg" }) {
   return (
     <div className="flex flex-wrap items-center justify-center gap-3">
-      <SignUpButton mode="modal">
+      <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
         <Button size={size} className="px-8">
           Get started for free
         </Button>
       </SignUpButton>
-      <SignInButton mode="modal">
+      <SignInButton mode="modal" forceRedirectUrl="/dashboard">
         <Button variant="outline" size={size} className="px-8">
           Sign in
         </Button>

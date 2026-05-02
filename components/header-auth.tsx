@@ -10,10 +10,10 @@ export function HeaderAuth() {
     <div className="flex items-center gap-2">
       {!isSignedIn && (
         <>
-          <SignInButton mode="modal">
+          <SignInButton mode="modal" forceRedirectUrl="/dashboard">
             <Button variant="outline" size="sm">Sign in</Button>
           </SignInButton>
-          <SignUpButton mode="modal">
+          <SignUpButton mode="modal" forceRedirectUrl="/dashboard">
             <Button size="sm">Sign up</Button>
           </SignUpButton>
         </>

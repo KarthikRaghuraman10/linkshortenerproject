@@ -13,7 +13,7 @@ This file is the entry point for LLM coding agents. All coding standards and con
 
 ## Critical Rules (Never Violate)
 
-1. **`proxy.ts`, not `middleware.ts`** — Next.js 16 renamed Middleware to Proxy.
+1. **`proxy.ts`, not `middleware.ts`** — `middleware.ts` is **DEPRECATED** and must **NEVER** be created or used. This project uses Next.js 16+, which renamed Middleware to Proxy. Always use `proxy.ts` at the project root instead.
 2. **`params` is a Promise** — always `await params` in pages and layouts.
 3. **`"use client"` is opt-in** — pages and layouts are Server Components by default.
 4. **Always authenticate in Server Functions** — they are reachable via direct POST requests.
